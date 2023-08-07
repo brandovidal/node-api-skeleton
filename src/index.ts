@@ -2,7 +2,9 @@ import express, { type Application } from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 
-import { router } from './routes'
+import router from './routes'
+
+import config from './config'
 
 // import { logger } from './utils/logger'
 
@@ -21,7 +23,7 @@ app.use(cors({ origin: '*', optionsSuccessStatus: 200 }))
 // Routes
 app.use('/', router)
 
-const port = process.env.PORT ?? 5000
+const port = config.PORT ?? 5000
 
 // Service
 app.listen(port, () => { console.info(`🚀 Server ready at: http://localhost:${port}}`) })

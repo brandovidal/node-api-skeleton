@@ -39,4 +39,4 @@ router.get('/', function (req, res) {
 //   res.status(error.code).json(AppError(error.code, error.name, message))
 // })
 
-export { router }
+export default router
