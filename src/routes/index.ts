@@ -16,7 +16,7 @@ const router = Router()
 router.use('/api/ia', iaRouter)
 
 router.get('/', function (req, res) {
-  res.send('Node API is running!')
+  res.send('Node API is running on http://localhost:5000/')
 })
 
 // router.use(

@@ -7,9 +7,9 @@ export default defineConfig([
     target: 'node18',
     platform: 'node',
     format: ['esm'],
-    splitting: false,
+    splitting: true,
     sourcemap: true,
-    minify: false,
+    minify: true,
     shims: true,
     dts: true
   }
