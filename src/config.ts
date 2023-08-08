@@ -9,7 +9,7 @@ const config = {
   isProduction,
   NODE_ENV,
   PORT: process.env.PORT,
-  CHATGPT_API_KEY: process.env.CHATGPT_API_KEY ?? ''
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY ?? ''
 }
 
 export default config

@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsup",
-    "dev": "concurrently 'tsup --watch' 'pnpm start'",
+    "dev": "concurrently 'tsup src/index.ts --watch' 'pnpm start'",
     "start": "node ./build/index.js"
   },
   "keywords": [],
