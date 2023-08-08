@@ -9,8 +9,10 @@ export default defineConfig([
     format: ['esm'],
     splitting: true,
     sourcemap: true,
-    minify: true,
+    minify: false,
     shims: true,
-    dts: true
+    dts: true,
+    treeshake: true,
+    bundle: true
   }
 ])

@@ -10,7 +10,7 @@ import { logger } from '../../utils/logger'
 const controller = new UserController()
 
 // create user
-export async function generateDescription (req: Request, res: Response, next: NextFunction): Promise<void> {
+export async function generateDescription(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const data = await controller.generateDescription(req.body)
 

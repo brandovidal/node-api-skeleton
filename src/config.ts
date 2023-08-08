@@ -9,7 +9,7 @@ const config = {
   isProduction,
   NODE_ENV,
   PORT: process.env.PORT,
-  OPENAI_API_KEY: process.env.OPENAI_API_KEY ?? ''
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY ?? null
 }
 
 export default config

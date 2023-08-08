@@ -11,6 +11,6 @@ import { generateDescription } from './handler'
 
 const router = Router()
 
-router.post('/chatgpt/generate-description', [validate(createSchema)], generateDescription)
+router.post('/generate-description', [validate(createSchema)], generateDescription)
 
 export default router
