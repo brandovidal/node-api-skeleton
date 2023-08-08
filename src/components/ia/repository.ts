@@ -10,7 +10,6 @@ export async function generateDescription(body: any): Promise<string> {
   const { content } = body
 
   const apiKey = config.OPENAI_API_KEY as string
-  console.log('🚀 ~ file: repository.ts:11 ~ generateDescription ~ apiKey:', apiKey)
 
   if (isEmpty(apiKey)) {
     throw new BaseError(403, 'api_key_not_found', 'API key not found')
