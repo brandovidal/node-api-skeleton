@@ -30,3 +30,11 @@ export async function generateDescription(body: any): Promise<string> {
 
   return response.text
 }
+
+export async function removeBackgroundImage(body: any): Promise<any> {
+  return Promise.resolve('removeBackgroundImage')
+}
+
+export async function recognitionObjectsImage(body: any): Promise<any> {
+  return Promise.resolve('recognitionObjectsImage')
+}

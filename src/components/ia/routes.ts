@@ -7,10 +7,12 @@ import { createSchema } from './schema'
 import { validate } from '../../middlewares/validate'
 
 // Handler
-import { generateDescription } from './handler'
+import { generateDescription, recognitionObjectsImage, removeBackgroundImage } from './handler'
 
 const router = Router()
 
 router.post('/generate-description', [validate(createSchema)], generateDescription)
+router.post('/remove-background-image', [], removeBackgroundImage)
+router.post('/recognition-objects-image', [], recognitionObjectsImage)
 
 export default router

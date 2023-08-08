@@ -1,4 +1,4 @@
-import { generateDescription } from './repository'
+import { generateDescription, recognitionObjectsImage, removeBackgroundImage } from './repository'
 
 import { GenerateDescription } from '../../interfaces/ia'
 
@@ -12,5 +12,13 @@ export default class UserController {
    */
   public async generateDescription(requestBody: GenerateDescription): Promise<string> {
     return await generateDescription(requestBody)
+  }
+
+  public async removeBackgroundImage(requestBody: GenerateDescription): Promise<any> {
+    return await removeBackgroundImage(requestBody)
+  }
+
+  public async recognitionObjectsImage(requestBody: GenerateDescription): Promise<any> {
+    return await recognitionObjectsImage(requestBody)
   }
 }

@@ -9,10 +9,31 @@ import { logger } from '../../utils/logger'
 
 const controller = new UserController()
 
-// create user
 export async function generateDescription(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
     const data = await controller.generateDescription(req.body)
+
+    res.status(HttpCode.CREATED).json(AppSuccess(data))
+  } catch (err) {
+    logger.error(err)
+    next(err)
+  }
+}
+
+export async function removeBackgroundImage(req: Request, res: Response, next: NextFunction): Promise<void> {
+  try {
+    const data = await controller.removeBackgroundImage(req.body)
+
+    res.status(HttpCode.CREATED).json(AppSuccess(data))
+  } catch (err) {
+    logger.error(err)
+    next(err)
+  }
+}
+
+export async function recognitionObjectsImage(req: Request, res: Response, next: NextFunction): Promise<void> {
+  try {
+    const data = await controller.recognitionObjectsImage(req.body)
 
     res.status(HttpCode.CREATED).json(AppSuccess(data))
   } catch (err) {
