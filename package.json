@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch",
+    "dev": "concurrently 'tsup --watch' 'pnpm start'",
     "start": "node ./build/index.js"
   },
   "keywords": [],
@@ -21,13 +21,17 @@
     "@types/express-serve-static-core": "4.17.35",
     "@types/morgan": "1.9.4",
     "@types/node": "20.4.8",
+    "concurrently": "8.2.0",
     "tsup": "7.2.0",
     "typescript": "5.1.6"
   },
   "dependencies": {
+    "chatgpt": "5.2.5",
     "cors": "2.8.5",
     "dotenv": "16.3.1",
     "express": "4.18.2",
-    "morgan": "1.10.0"
+    "morgan": "1.10.0",
+    "winston": "3.10.0",
+    "zod": "3.21.4"
   }
 }

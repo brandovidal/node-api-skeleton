@@ -6,7 +6,7 @@ import router from './routes'
 
 import config from './config'
 
-// import { logger } from './utils/logger'
+import { logger } from './utils/logger'
 
 const app: Application = express()
 
@@ -26,6 +26,6 @@ app.use('/', router)
 const port = config.PORT ?? 5000
 
 // Service
-app.listen(port, () => { console.info(`🚀 Server ready at: http://localhost:${port}}`) })
+app.listen(port, () => { logger.info(`🚀 Server ready at: http://localhost:${port}}`) })
 
 export default app
